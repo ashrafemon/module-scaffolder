@@ -33,6 +33,29 @@ Run this command
 php artisan module:scaffold
 ```
 
+### Step 4:
+
+Copy this code to RouteServiceProvider.php
+
+```bash
+public function boot()
+{
+    $this->configureRateLimiting();
+
+    $this->routes(function () {
+        Route::middleware('api')
+            ->prefix('api')
+            ->group(base_path('routes/api.php'));
+
+        Route::middleware('web')
+            ->group(base_path('routes/web.php'));
+
+        Route::middleware('web')
+            ->group(base_path('modules/web.php'));
+    });
+}
+```
+
 ## Usage
 
 Use this command to make module
