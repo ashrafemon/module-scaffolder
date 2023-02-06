@@ -61,14 +61,14 @@ public function boot()
 Use this command to make module
 
 ```bash
-php artisan module:make {moduleName}
+php artisan module:make
 ```
 
 Module web routes use inside modules/web.php
 
 ```bash
 Route::get('{route}', function(){
-    return view('{moduleName}/html/index');
+    return view('{moduleName}.html.index');
 });
 ```
 
@@ -76,8 +76,8 @@ If module have js & css then append that file to vite.config.js
 
 ```bash
 files = [
-    {moduleName}/css/{moduleName}.css
-    {moduleName}/js/{moduleName}.js,
+    'modules/{moduleName}/css/{moduleName}.css',
+    'modules/{moduleName}/js/{moduleName}.js',
 
     ...,
 ]
