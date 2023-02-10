@@ -1,26 +1,27 @@
 {
-    "name": "leafwrap/module-scaffolder",
-    "description": "Module scaffold to organize folder structure",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Leafwrap\\ModuleScaffolder\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Ashraf Emon",
-            "email": "ashraf.emon143@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {},
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Leafwrap\\ModuleScaffolder\\ModuleScaffolderServiceProvider"
-            ]
-        }
+  "name": "leafwrap/module-scaffolder",
+  "description": "Module scaffold to organize folder structure",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Leafwrap\\ModuleScaffolder\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Ashraf Emon",
+      "email": "ashraf.emon143@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {},
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Leafwrap\\ModuleScaffolder\\ModuleScaffolderServiceProvider"
+      ]
+    }
+  }
 }
